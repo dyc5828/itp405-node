@@ -1,0 +1,39 @@
+<%- include('html-header'); %>
+<title>DVD Results</title>
+
+<%- include('html-css'); %>
+<%- include('html-js'); %>
+<%- include('html-body'); %>
+<%- include('nav1'); %>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+
+			<h2>DVD Results</h2>
+			<p><%=dvds.length%> dvds found.</p>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Award</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% dvds.forEach(function(dvd) { %>
+					<tr>
+						<td>
+							<%=dvd.title%>
+						</td>
+						<td>
+							<%=dvd.award%>
+						</td>
+					</tr>
+					<% }) %>
+				</tbody>
+			</table>
+
+		</div><!--/.md6o3-->
+	</div><!--/.row-->
+
+</div><!--/.container-fluid-->
